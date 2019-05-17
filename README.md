@@ -2,6 +2,10 @@
 Check the changelog.MD for more info
 This Tool can convert given Animation(s) to PS4 format
 
+Please note: this is beta and bugs are posable so please do report them
+
+2nd note: this only supports Skyrim and will soon support fallout 4 but as of now its a no
+
 Requirements:
 
 HavokBehaviorPostProcess.exe found in the creation kit for Skyrim Special Edition
