@@ -17,6 +17,6 @@ hkxcmd found on the nexus https://www.nexusmods.com/skyrim/mods/1797
 
 How to install the required files:
 
-step one(1): copy all the required files to the "Data" folder
+step one(1): copy all the required files to the "Data" and the havok content tools to there respective folder
 
 You are done use the tool as you wish
