@@ -16,4 +16,4 @@ step one(1): copy all the required files to the "Data" folder
 
 You are done use the tool as you wish
 
-![Screenshot](Main.PNG)
+![Screenshot](MAIN.PNG)

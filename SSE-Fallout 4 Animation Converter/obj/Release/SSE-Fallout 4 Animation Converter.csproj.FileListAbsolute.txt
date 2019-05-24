@@ -1,0 +1,11 @@
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\bin\Release\SSE-Fallout 4 Animation Converter.exe.config
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\bin\Release\SSE-Fallout 4 Animation Converter.exe
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\bin\Release\SSE-Fallout 4 Animation Converter.pdb
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE_Fallout_4_Animation_Converter.Credits.resources
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE_Fallout_4_Animation_Converter.Main.resources
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE_Fallout_4_Animation_Converter.Properties.Resources.resources
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE-Fallout 4 Animation Converter.csproj.GenerateResource.cache
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE-Fallout 4 Animation Converter.csproj.CoreCompileInputs.cache
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE-Fallout 4 Animation Converter.exe
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE-Fallout 4 Animation Converter.pdb
+C:\Users\Logan Melott\source\repos\SSE-Fallout 4 Animation Converter\SSE-Fallout 4 Animation Converter\obj\Release\SSE-Fallout 4 Animation Converter.csprojAssemblyReference.cache
