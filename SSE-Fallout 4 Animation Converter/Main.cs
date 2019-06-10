@@ -229,7 +229,6 @@ namespace SSE_Fallout_4_Animation_Converter
 
                 else if (SK.Checked)
                 {
-                    MessageBox.Show("there is a high chance this will throw an error, but you can try", ("Warning"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     if (File.Exists(filePaths[i].ToString().Replace(".hkx", ".hko")))
                     {
                         File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
@@ -389,6 +388,10 @@ namespace SSE_Fallout_4_Animation_Converter
                         {
                             File.Move("xml\\defaultfemale.hkx", "Meshes\\actors\\character\\characters female\\defaultfemale.hkx");
                         }
+                        else if (File.Exists("xml\\1hm_behavior.hkx"))
+                        {
+                            File.Move("xml\\1hm_behavior.hkx", "Meshes\\actors\\character\\behaviors\\1hm_behavior.hkx");
+                        }
                     }
                 }
 
@@ -500,6 +503,10 @@ namespace SSE_Fallout_4_Animation_Converter
                         else if (File.Exists("xml\\defaultfemale.hkx"))
                         {
                             File.Move("xml\\defaultfemale.hkx", "Meshes\\actors\\character\\characters female\\defaultfemale.hkx");
+                        }
+                        else if (File.Exists("xml\\1hm_behavior.hkx"))
+                        {
+                            File.Move("xml\\1hm_behavior.hkx", "Meshes\\actors\\character\\behaviors\\1hm_behavior.hkx");
                         }
                     }
                 }
