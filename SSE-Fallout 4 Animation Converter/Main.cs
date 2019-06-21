@@ -200,66 +200,135 @@ namespace SSE_Fallout_4_Animation_Converter
             {
                 if (F4.Checked)
                 {
-                    if (File.Exists(filePaths[i].ToString().Replace(".hkx", ".hko")))
+                    if (filePaths[i].Contains(".hkx"))
                     {
+                        if (File.Exists(filePaths[i].ToString().Replace(".hkx", ".hko")))
+                        {
+                            File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        }
+                        File.Copy("Data\\Refrence.hko", filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        string text = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        string exportinfo = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        text = text.Replace("Replace", filePaths[i].ToString());
+                        exportinfo = text.Replace("filename.hkx", filePaths[i].ToString());
+                        File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), text);
+                        File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), exportinfo);
+                        Process pro = new Process();
+                        pro.StartInfo.FileName = "cmd.exe";
+                        pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro.StartInfo.Arguments = "/c Data\\HCT_2014\\hctStandAloneFilterManager.exe -s \"" + filePaths[i].ToString().Replace(".hkx", ".hko") + "\" \"" + filePaths[i] + "\" -t -v -o \"" + filePaths[i] + "\"";
+                        pro.Start();
+                        pro.WaitForExit();
                         File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        /// This its going to convert the Animation to PS4 version
+                        /// this is going to make the progress bar know how many files there are so it can move the bar acordingly
+                        progressBar1.Maximum = lboxFiles.Items.Count;
+                        /// This is going to make it so you can see the bar move
+                        System.GC.Collect();
+                        /// this is going to make it move
+                        progressBar1.Value++;
                     }
-                    File.Copy("Data\\Refrence.hko", filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    string text = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    string exportinfo = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    text = text.Replace("Replace", filePaths[i].ToString());
-                    exportinfo = text.Replace("filename.hkx", filePaths[i].ToString());
-                    File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), text);
-                    File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), exportinfo);
-                    Process pro = new Process();
-                    pro.StartInfo.FileName = "cmd.exe";
-                    pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    pro.StartInfo.Arguments = "/c Data\\HCT_2014\\hctStandAloneFilterManager.exe -s \"" + filePaths[i].ToString().Replace(".hkx", ".hko") + "\" \"" + filePaths[i] + "\" -t -v -o \"" + filePaths[i] + "\"";
-                    pro.Start();
-                    pro.WaitForExit();
-                    File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    /// This its going to convert the Animation to PS4 version
-                    /// this is going to make the progress bar know how many files there are so it can move the bar acordingly
-                    progressBar1.Maximum = lboxFiles.Items.Count;
-                    /// This is going to make it so you can see the bar move
-                    System.GC.Collect();
-                    /// this is going to make it move
-                    progressBar1.Value++;
+                    else if (filePaths[i].Contains(".HKX"))
+                    {
+                        if (File.Exists(filePaths[i].ToString().Replace(".HKX", ".hko")))
+                        {
+                            File.Delete(filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        }
+                        File.Copy("Data\\Refrence.hko", filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        string text = File.ReadAllText(filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        string exportinfo = File.ReadAllText(filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        text = text.Replace("Replace", filePaths[i].ToString());
+                        exportinfo = text.Replace("filename.hkx", filePaths[i].ToString());
+                        File.WriteAllText(filePaths[i].ToString().Replace(".HKX", ".hko"), text);
+                        File.WriteAllText(filePaths[i].ToString().Replace(".HKX", ".hko"), exportinfo);
+                        Process pro = new Process();
+                        pro.StartInfo.FileName = "cmd.exe";
+                        pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro.StartInfo.Arguments = "/c Data\\HCT_2014\\hctStandAloneFilterManager.exe -s \"" + filePaths[i].ToString().Replace(".HKX", ".hko") + "\" \"" + filePaths[i] + "\" -t -v -o \"" + filePaths[i] + "\"";
+                        pro.Start();
+                        pro.WaitForExit();
+                        File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        /// This its going to convert the Animation to PS4 version
+                        /// this is going to make the progress bar know how many files there are so it can move the bar acordingly
+                        progressBar1.Maximum = lboxFiles.Items.Count;
+                        /// This is going to make it so you can see the bar move
+                        System.GC.Collect();
+                        /// this is going to make it move
+                        progressBar1.Value++;
+                    }
                 }
 
                 else if (SK.Checked)
                 {
-                    if (File.Exists(filePaths[i].ToString().Replace(".hkx", ".hko")))
+                    if (filePaths[i].Contains(".hkx"))
                     {
+                        if (File.Exists(filePaths[i].ToString().Replace(".hkx", ".hko")))
+                        {
+                            File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        }
+                        File.Copy("Data\\SkyrimRefrence.hko", filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        string text = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        string exportinfo = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        text = text.Replace("Replace", filePaths[i].ToString());
+                        exportinfo = text.Replace("filename.hkx", filePaths[i].ToString());
+                        File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), text);
+                        File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), exportinfo);
+                        Process pro = new Process();
+                        pro.StartInfo.FileName = "cmd.exe";
+                        pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro.StartInfo.Arguments = "/c Data\\HCT_2010\\hctStandAloneFilterManager.exe -s \"" + filePaths[i].ToString().Replace(".hkx", ".hko") + "\" \"" + filePaths[i] + "\" -t -v -o \"" + filePaths[i] + "\"";
+                        pro.Start();
+                        pro.WaitForExit();
                         File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
+                        Process pro1 = new Process();
+                        pro1.StartInfo.FileName = "cmd.exe";
+                        pro1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i] + "\" \"" + filePaths[i] + "\"";
+                        pro1.Start();
+                        pro1.WaitForExit();
+                        /// This its going to convert the Animation to PS4 version
+                        /// this is going to make the progress bar know how many files there are so it can move the bar acordingly
+                        progressBar1.Maximum = lboxFiles.Items.Count;
+                        /// This is going to make it so you can see the bar move
+                        System.GC.Collect();
+                        /// this is going to make it move
+                        progressBar1.Value++;
                     }
-                    File.Copy("Data\\SkyrimRefrence.hko", filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    string text = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    string exportinfo = File.ReadAllText(filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    text = text.Replace("Replace", filePaths[i].ToString());
-                    exportinfo = text.Replace("filename.hkx", filePaths[i].ToString());
-                    File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), text);
-                    File.WriteAllText(filePaths[i].ToString().Replace(".hkx", ".hko"), exportinfo);
-                    Process pro = new Process();
-                    pro.StartInfo.FileName = "cmd.exe";
-                    pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    pro.StartInfo.Arguments = "/c Data\\HCT_2010\\hctStandAloneFilterManager.exe -s \"" + filePaths[i].ToString().Replace(".hkx", ".hko") + "\" \"" + filePaths[i] + "\" -t -v -o \"" + filePaths[i] + "\"";
-                    pro.Start();
-                    pro.WaitForExit();
-                    File.Delete(filePaths[i].ToString().Replace(".hkx", ".hko"));
-                    Process pro1 = new Process();
-                    pro1.StartInfo.FileName = "cmd.exe";
-                    pro1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    pro1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i] + "\" \"" + filePaths[i] + "\"";
-                    pro1.Start();
-                    pro1.WaitForExit();
-                    /// This its going to convert the Animation to PS4 version
-                    /// this is going to make the progress bar know how many files there are so it can move the bar acordingly
-                    progressBar1.Maximum = lboxFiles.Items.Count;
-                    /// This is going to make it so you can see the bar move
-                    System.GC.Collect();
-                    /// this is going to make it move
-                    progressBar1.Value++;
+
+                    else if (filePaths[i].Contains(".HKX"))
+                    {
+                        if (File.Exists(filePaths[i].ToString().Replace(".HKX", ".hko")))
+                        {
+                            File.Delete(filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        }
+                        File.Copy("Data\\SkyrimRefrence.hko", filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        string text = File.ReadAllText(filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        string exportinfo = File.ReadAllText(filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        text = text.Replace("Replace", filePaths[i].ToString());
+                        exportinfo = text.Replace("filename.hkx", filePaths[i].ToString());
+                        File.WriteAllText(filePaths[i].ToString().Replace(".HKX", ".hko"), text);
+                        File.WriteAllText(filePaths[i].ToString().Replace(".HKX", ".hko"), exportinfo);
+                        Process pro = new Process();
+                        pro.StartInfo.FileName = "cmd.exe";
+                        pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro.StartInfo.Arguments = "/c Data\\HCT_2010\\hctStandAloneFilterManager.exe -s \"" + filePaths[i].ToString().Replace(".HKX", ".hko") + "\" \"" + filePaths[i] + "\" -t -v -o \"" + filePaths[i] + "\"";
+                        pro.Start();
+                        pro.WaitForExit();
+                        File.Delete(filePaths[i].ToString().Replace(".HKX", ".hko"));
+                        Process pro1 = new Process();
+                        pro1.StartInfo.FileName = "cmd.exe";
+                        pro1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i] + "\" \"" + filePaths[i] + "\"";
+                        pro1.Start();
+                        pro1.WaitForExit();
+                        /// This its going to convert the Animation to PS4 version
+                        /// this is going to make the progress bar know how many files there are so it can move the bar acordingly
+                        progressBar1.Maximum = lboxFiles.Items.Count;
+                        /// This is going to make it so you can see the bar move
+                        System.GC.Collect();
+                        /// this is going to make it move
+                        progressBar1.Value++;
+                    }
                 }
 
                 else if (SK_Upgrade.Checked)
