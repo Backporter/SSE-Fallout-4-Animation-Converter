@@ -329,6 +329,40 @@ namespace SSE_Fallout_4_Animation_Converter
                         /// this is going to make it move
                         progressBar1.Value++;
                     }
+                    else if (filePaths[i].Contains(".HkX"))
+                    {
+                        if (File.Exists(filePaths[i].ToString().Replace(".HkX", ".hko")))
+                        {
+                            File.Delete(filePaths[i].ToString().Replace(".HkX", ".hko"));
+                        }
+                        File.Copy("Data\\SkyrimRefrence.hko", filePaths[i].ToString().Replace(".HkX", ".hko"));
+                        string text = File.ReadAllText(filePaths[i].ToString().Replace(".HkX", ".hko"));
+                        string exportinfo = File.ReadAllText(filePaths[i].ToString().Replace(".HkX", ".hko"));
+                        text = text.Replace("Replace", filePaths[i].ToString());
+                        exportinfo = text.Replace("filename.hkx", filePaths[i].ToString());
+                        File.WriteAllText(filePaths[i].ToString().Replace(".HkX", ".hko"), text);
+                        File.WriteAllText(filePaths[i].ToString().Replace(".HkX", ".hko"), exportinfo);
+                        Process pro = new Process();
+                        pro.StartInfo.FileName = "cmd.exe";
+                        pro.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro.StartInfo.Arguments = "/c Data\\HCT_2010\\hctStandAloneFilterManager.exe -s \"" + filePaths[i].ToString().Replace(".HkX", ".hko") + "\" \"" + filePaths[i] + "\" -t -v -o \"" + filePaths[i] + "\"";
+                        pro.Start();
+                        pro.WaitForExit();
+                        File.Delete(filePaths[i].ToString().Replace(".HkX", ".hko"));
+                        Process pro1 = new Process();
+                        pro1.StartInfo.FileName = "cmd.exe";
+                        pro1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        pro1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i] + "\" \"" + filePaths[i] + "\"";
+                        pro1.Start();
+                        pro1.WaitForExit();
+                        /// This its going to convert the Animation to PS4 version
+                        /// this is going to make the progress bar know how many files there are so it can move the bar acordingly
+                        progressBar1.Maximum = lboxFiles.Items.Count;
+                        /// This is going to make it so you can see the bar move
+                        System.GC.Collect();
+                        /// this is going to make it move
+                        progressBar1.Value++;
+                    }
                 }
 
                 else if (SK_Upgrade.Checked)
@@ -362,7 +396,7 @@ namespace SSE_Fallout_4_Animation_Converter
                     Process process1 = new Process();
                     process1.StartInfo.FileName = "cmd.exe";
                     process1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    process1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i] + "\" \"" + filePaths[i].ToString().Replace(".xml", ".hkx") + "\"";
+                    process1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i].ToString().Replace(".xml", ".hkx") + "\" \"" + filePaths[i].ToString().Replace(".xml", ".hkx") + "\"";
                     process1.Start();
                     process1.WaitForExit();
                     /// This its going to convert the Animation to PS4 version
@@ -478,7 +512,7 @@ namespace SSE_Fallout_4_Animation_Converter
                     Process process1 = new Process();
                     process1.StartInfo.FileName = "cmd.exe";
                     process1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                    process1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i] + "\" \"" + filePaths[i].ToString().Replace(".xml", ".hkx") + "\"";
+                    process1.StartInfo.Arguments = "/c data\\HavokBehaviorPostProcess.exe --platformPS4 \"" + filePaths[i].ToString().Replace(".xml", ".hkx") + "\" \"" + filePaths[i].ToString().Replace(".xml", ".hkx") + "\"";
                     process1.Start();
                     process1.WaitForExit();
                     /// This its going to convert the Animation to PS4 version
