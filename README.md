@@ -1,7 +1,12 @@
 ![Screenshot](MAIN.PNG)
 # SSE-Fallout-4-Animation-Converter
 Check the changelog.MD for more info
-This Tool can convert given Animation(s) to PS4 format
+This Tool can convert given Animation(s) to PS4 format}
+---------------------------------------------------------------------
+**NOTES:**
+
+**Some Animation's will fail, i have no control of how Animation's are made so i can't say this will work 100% of the note**
+--------------------------------------------------------------------------
 
 Please note: this is beta and bugs are posable so please do report them
 
