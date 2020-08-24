@@ -5,7 +5,9 @@ This Tool can convert given Animation(s) to PS4 format}
 ---------------------------------------------------------------------
 **NOTES:**
 
-**Some Animation's will fail, i have no control of how Animation's are made so i can't say this will work 100% of the note**
+**Some Animation's will fail, i have no control of how Animation's are made so i can't say this will work 100% of the time**
+
+**this will only work on Animation's BEHAVIORS WILL NOT WORK(for fallout anyway)**
 --------------------------------------------------------------------------
 
 Please note: this is beta and bugs are posable so please do report them
