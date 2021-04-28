@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hkoptions>
+	<hkobject class="hctConfigurationSetData">
+		<hkparam name="filterManagerVersion">65536</hkparam>
+		<hkparam name="activeConfiguration">0</hkparam>
+	</hkobject>
+	<hkobject class="hctConfigurationData">
+		<hkparam name="configurationName">ConvertAnimation_x32</hkparam>
+		<hkparam name="numFilters">3</hkparam>
+	</hkobject>
+	<hkobject name="Merge Asset" class="hctFilterData">
+		<hkparam name="id">3033372433</hkparam>
+		<hkparam name="ver">65536</hkparam>
+		<hkparam name="hasOptions">true</hkparam>
+	</hkobject>
+	<hkobject name="Merge Asset" class="hctMergeAssetOptions">
+		<hkparam name="filename">Replace</hkparam>
+	</hkobject>
+	<hkobject name="Prune Types" class="hctFilterData">
+		<hkparam name="id">2496164476</hkparam>
+		<hkparam name="ver">66048</hkparam>
+		<hkparam name="hasOptions">true</hkparam>
+	</hkobject>
+	<hkobject name="Prune Types" class="hctPruneTypesOptions">
+		<hkparam name="pruneSceneData">true</hkparam>
+		<hkparam name="pruneMeshData">false</hkparam>
+		<hkparam name="pruneSkeletonData">true</hkparam>
+		<hkparam name="pruneAnimationData">false</hkparam>
+		<hkparam name="customClasses"></hkparam>
+		<hkparam name="pruneAllSceneData">true</hkparam>
+		<hkparam name="pruneEnvironmentData">true</hkparam>
+		<hkparam name="pruneResourceData">true</hkparam>
+		<hkparam name="pruneDestructionData">false</hkparam>
+		<hkparam name="pruneAnimationTracks">false</hkparam>
+		<hkparam name="pruneAnnotations">false</hkparam>
+		<hkparam name="pruneIdentityBindingIndices">true</hkparam>
+		<hkparam name="pruneQuantizedBindings">true</hkparam>
+		<hkparam name="pruneAttributes">false</hkparam>
+		<hkparam name="pruneMeshUserChannels">false</hkparam>
+		<hkparam name="pruneAttachments">true</hkparam>
+		<hkparam name="pruneSelectionSets">false</hkparam>
+		<hkparam name="selectionSets"></hkparam>
+		<hkparam name="selectionDeletionMode">HK_SELECTION_DELETE_SELECTED</hkparam>
+		<hkparam name="pruneAllAnimationData">false</hkparam>
+		<hkparam name="pruneMeshBindingData">true</hkparam>
+		<hkparam name="pruneRagdollAndMapperData">true</hkparam>
+	</hkobject>
+	<hkobject name="Write to Platform" class="hctFilterData">
+		<hkparam name="id">2876798309</hkparam>
+		<hkparam name="ver">65792</hkparam>
+		<hkparam name="hasOptions">true</hkparam>
+	</hkobject>
+	<hkobject name="Write to Platform" class="hctPlatformWriterOptions">
+		<hkparam name="filename">filename.hkx</hkparam>
+		<hkparam name="tagfile">false</hkparam>
+		<hkparam name="preset">GCC_PS3</hkparam>
+		<hkparam name="bytesInPointer">4</hkparam>
+		<hkparam name="littleEndian">0</hkparam>
+		<hkparam name="reusePaddingOptimized">1</hkparam>
+		<hkparam name="emptyBaseClassOptimized">1</hkparam>
+		<hkparam name="removeMetadata">true</hkparam>
+		<hkparam name="userTag">0</hkparam>
+		<hkparam name="saveEnvironmentData">false</hkparam>
+	</hkobject>
+</hkoptions>
